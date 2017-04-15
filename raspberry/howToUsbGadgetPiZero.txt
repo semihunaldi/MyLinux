@@ -1,0 +1,16 @@
+1- write raspbian to sd card
+2- at boot directory in sdcard, open config.txt and at the end of the file add (dtoverlay=dwc2) (without brackets)
+3- at boot directory in sdcard, open cmdline.txt and add (modules-load=dwc2,g_ether) after rootwait command.
+	(without brackets) (and make sure that this file is a single line text)
+4- at the root directory of boot in sdcard, put a "ssh" file without any extension to enable ssh at boot
+5- install Bonjour Print Services to windows for seeing rpi as raspberrypi.local
+6- put sdcard to raspberry pi zero and plug into your computer with usb cable, (usb port at rpi Z-not power)
+7- make sure that Windows sees it as RNDIS/Ethernet Gadget. adjust the drivers.
+8- share internet connection with rpi Z at adapter settings.
+9- ssh into raspberrypi with ipaddress: raspberrypi.local
+10- sudo nano /etc/network/interfaces (open this file and make sure it looks like below)
+	important lines are : 
+		auto lo usb0
+		allow-hotplug usb0
+		iface usb0 inet manual
+11- reboot rpi Z and ping google.com
