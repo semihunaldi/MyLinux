@@ -16,6 +16,8 @@ alias rebo="sudo reboot"
 
 alias cd..='cd ../'                         # Go back 1 directory level (for fast typers)
 
+alias restartNetwork="sudo /etc/init.d/network restart
+
 alias c='clear'                             # c:            Clear terminal display
 #alias which='type -all'                     # which:        Find executables
 #alias path='echo -e ${PATH//:/\\n}'         # path:         Echo all executable Paths
