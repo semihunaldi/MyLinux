@@ -14,6 +14,8 @@ alias listdisk="lsblk"
 alias disableGUI="sudo systemctl set-default multi-user.target"
 alias enableGUI="sudo systemctl set-default graphical.target"
 
+alias fm="free -m"
+
 alias shut="sudo shutdown -h now"
 alias rebo="sudo reboot"
 
