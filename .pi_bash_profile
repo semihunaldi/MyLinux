@@ -1,6 +1,7 @@
 source ~/.bashrc
 
 alias editbashprofile="sudo nano ~/.bash_profile"
+alias sourcebashprofile="source ~/.bash_profile"
 
 alias edit="sudo nano"
 
