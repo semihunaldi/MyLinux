@@ -38,9 +38,26 @@ alias path='echo -e ${PATH//:/\\n}'         # path:         Echo all executable 
 alias cwd='pwd | pbcopy'                    # cwd:          Copy the working direct$
 alias show_options='shopt'                  # Show_options: display bash options settings
 alias fix_stty='stty sane'                  # fix_stty:     Restore terminal settings when screwed up
-alias cic='set completion-ignore-case On'   # cic:          Make tab-completion case-insensitive
 alias lr='ls -R | grep ":$" | sed -e '\''s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\'' -e '\''s/^/   /'\'' -e '\''s/-/|/'\'' | less' #   lr:  Full Recursive Directory Listing
 
+
+cicOn()
+{
+    # If ~./inputrc doesn't exist yet, first include the original /etc/inputrc so we don't override it
+    if [ ! -a ~/.inputrc ]; then echo '$include /etc/inputrc' > ~/.inputrc; fi
+
+    # Add option to ~/.inputrc to enable case-insensitive tab completion
+    echo 'set completion-ignore-case On' >> ~/.inputrc
+}
+
+cicOff()
+{
+    # If ~./inputrc doesn't exist yet, first include the original /etc/inputrc so we don't override it
+    if [ ! -a ~/.inputrc ]; then echo '$include /etc/inputrc' > ~/.inputrc; fi
+
+    # Add option to ~/.inputrc to enable case-insensitive tab completion
+    echo 'set completion-ignore-case Off' >> ~/.inputrc
+}
 
     ii() {
         echo -e "\nYou are logged on ${RED}$HOST"
