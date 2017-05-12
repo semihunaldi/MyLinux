@@ -84,6 +84,12 @@ alias cwd='pwd | pbcopy'                                        # cwd:          
              echo "'$1' is not a valid file"
          fi
     }
+    
+    cpuTemp () {
+        cpu=$(</sys/class/thermal/thermal_zone0/temp)
+        echo "$((cpu/1000)) c"
+    }
+
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
