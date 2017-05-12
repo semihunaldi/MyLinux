@@ -90,6 +90,13 @@ alias cwd='pwd | pbcopy'                                        # cwd:          
         cpu=$(</sys/class/thermal/thermal_zone0/temp)
         echo "$((cpu/1000)) c"
     }
+    
+    configuregit() {
+        $(git config --global user.email semihunaldi@gmail.com)
+        $(git config --global user.name semihunaldi)
+        $(git config --global credential.helper store)
+    }
+
 
 
 # set a fancy prompt (non-color, unless we know we "want" color)
