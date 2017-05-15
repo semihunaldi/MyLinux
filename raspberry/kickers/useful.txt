@@ -14,3 +14,6 @@ network 192.168.1.0
 broadcast 192.168.1.255
 	wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
 ########################################
+completely removing a user
+sudo userdel -r -f username
+#########################################
