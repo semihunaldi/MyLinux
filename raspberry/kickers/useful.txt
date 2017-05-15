@@ -1,1 +1,16 @@
+##################################################
+
 put UseDNS=no in /etc/ssh/sshd_config to speed up login
+
+########################################
+for static ip edit /etc/network/interfaces like below
+
+allow-hotplug wlan0
+iface wlan0 inet static
+address 192.168.1.XXX
+netmask 255.255.255.0
+gateway 192.168.1.1
+network 192.168.1.0
+broadcast 192.168.1.255
+	wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
+########################################
