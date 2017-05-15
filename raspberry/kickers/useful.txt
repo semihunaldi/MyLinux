@@ -1,0 +1,1 @@
+put UseDNS=no in /etc/ssh/sshd_config to speed up login
