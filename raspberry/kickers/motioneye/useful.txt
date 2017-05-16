@@ -1,0 +1,18 @@
+#Both the boot and the root partitions are mounted read-only to prevent filesystem corruption. 
+#If you want to make changes to a file on any of these two partitions, re-mount them as writable:
+mount -o remount,rw /
+mount -o remount,rw /boot
+
+########################################
+
+nano /etc/sshd_config
+PermitRootLogin without-password
+PermitEmptyPasswords no
+UseDNS no
+PasswordAuthentication no
+#change port if you want to
+
+########################################
+put your authorized key into /data/etc/ssh_authorized_keys file
+
+
