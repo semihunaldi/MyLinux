@@ -17,3 +17,7 @@ broadcast 192.168.1.255
 completely removing a user
 sudo userdel -r -f username
 #########################################
+sudo adduser user_name
+sudo usermod -aG sudo user_name
+########################################
+put your ssh key into /home/user/.ssh/authorized_keys file
