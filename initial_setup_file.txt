@@ -5,5 +5,4 @@ rsync --archive --chown=semihunaldi:semihunaldi ~/.ssh /home/semihunaldi
 
 
 cd /home/semihunaldi
-curl https://raw.githubusercontent.com/semihunaldi/MyLinux/master/.bash_profile > .bash_profile
-source .bash_profile
+curl https://raw.githubusercontent.com/semihunaldi/MyLinux/master/.bash_profile > .profile
