@@ -18,6 +18,9 @@ alias cd..='cd ../'                         # Go back 1 directory level (for fas
 
 alias restartNetwork="sudo /etc/init.d/network restart"
 
+
+alias killdeluge="sudo pkill deluged"
+
 alias c='clear'                             # c:            Clear terminal display
 #alias which='type -all'                     # which:        Find executables
 #alias path='echo -e ${PATH//:/\\n}'         # path:         Echo all executable Paths
